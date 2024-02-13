@@ -9,7 +9,7 @@ main {
 }
 
 article {
-  background: lightblue;
+  background: rgba(7, 134, 207, 0.671);
   padding: 2em;
 
   /*  vert center. horiz center.  */
@@ -33,3 +33,7 @@ aside img {
   object-fit: cover;
 }
 
+p{
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
