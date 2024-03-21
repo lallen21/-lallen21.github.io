@@ -1,39 +1,142 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  animation: headerFadeIn 1s ease-in-out;
+}
 
+.name {
+  margin: 0;
+  font-size: 2.5rem;
+  animation: nameFadeIn 2s ease-in-out;
+}
+
+/* Main Styles */
 main {
-  background: gainsboro;
-
-  /*  make two colums  */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
+  grid-template-columns: 1fr 1fr;
+  animation: mainFadeIn 2s ease-in-out;
 }
 
+/* Article Styles */
 article {
-  background: rgba(7, 134, 207, 0.671);
-  padding: 2em;
-
-  /*  vert center. horiz center.  */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 30px;
+  animation: articleFadeIn 2s ease-in-out;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  animation: titleFadeIn 2s ease-in-out;
+}
+
+.nav-links {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #3879dc;
+  color: #000000;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Aside Styles */
 aside {
-  background: lightcoral;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-aside img {
-  /* fit image to container */
-  display: block;
+.profile-pic {
   max-width: 100%;
-
-  /* full height image. Fit to container. no stretching. */
-  height: 100vh;
-  object-fit: cover;
+  height: auto;
+  animation: profilePicFadeIn 2s ease-in-out;
 }
 
-p{
-  font-size: 1.25rem;
-  line-height: 2rem;
+/* Animations */
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nameFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mainFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes articleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes profilePicFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
